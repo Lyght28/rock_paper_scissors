@@ -1,5 +1,8 @@
-import 'package:rock_paper_scissors/rock_paper_scissors.dart' as rock_paper_scissors;
+import 'package:rock_paper_scissors/Janken.dart';
+
 
 void main(List<String> arguments) {
-  print('Hello world: ${rock_paper_scissors.calculate()}!');
+  int? nbTurn = arguments.isNotEmpty ? int.tryParse(arguments[0]) : null;
+  Janken janken = Janken(nbTurn != null ? nbTurn : 1);
+  janken.main();
 }

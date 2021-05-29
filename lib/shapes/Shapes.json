@@ -1,7 +1,7 @@
 [
   {
     "object": "rock",
-    "alternativeNames": ["rock", "rocks", "1", "r"],
+    "alternativeNames": ["rocks", "1", "r"],
 
     "win": ["scissors"],
     "lose": ["paper"],
@@ -9,7 +9,7 @@
   },
   {
     "object": "paper",
-    "alternativeNames": [],
+    "alternativeNames": ["papers", "2", "p"],
 
     "win": ["rock"],
     "lose": ["scissors"],
@@ -17,7 +17,7 @@
   },
   {
     "object": "scissors",
-    "alternativeNames": [],
+    "alternativeNames": ["scissor", "3", "s"],
 
     "win": ["paper"],
     "lose": ["rock"],

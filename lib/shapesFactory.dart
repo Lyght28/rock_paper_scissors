@@ -6,7 +6,7 @@ import 'Shape.dart';
 class ShapesFactory {
   final String path;
 
-  ShapesFactory([this.path = 'shapes/Shapes.json']);
+  ShapesFactory([this.path = 'lib/shapes/Shapes.json']);
 
   String readFile() => File(path).readAsStringSync();
 
@@ -23,17 +23,3 @@ class ShapesFactory {
 }
 
 
-void main() {
-
-
-  ShapesFactory shapesFactory = ShapesFactory();
-
-  var json = shapesFactory.toJson(shapesFactory.readFile());
-  var test = json[0]['draw'].cast<String>();
-  test.add("test");
-  print(test.runtimeType);
-  List<Shape> shapeList = shapesFactory.getShapes();
-
-  shapeList.forEach((element) {print(element);});
-  print(shapeList[0].draw);
-}
