@@ -1,2 +1,2 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+A simple rock, paper, scissors command-line.
+Do `run dart` in the `rock_paper_scissors` directory.
