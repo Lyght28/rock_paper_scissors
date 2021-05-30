@@ -1,0 +1,26 @@
+[
+  {
+    "object": "rock",
+    "alternativeNames": ["rocks", "1", "r"],
+
+    "win": ["scissors"],
+    "lose": ["paper"],
+    "draw": []
+  },
+  {
+    "object": "paper",
+    "alternativeNames": ["papers", "2", "p"],
+
+    "win": ["rock"],
+    "lose": ["scissors"],
+    "draw": []
+  },
+  {
+    "object": "scissors",
+    "alternativeNames": ["scissor", "3", "s"],
+
+    "win": ["paper"],
+    "lose": ["rock"],
+    "draw": []
+  }
+]

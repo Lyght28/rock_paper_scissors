@@ -1,8 +1,8 @@
-import 'dart:io';
 import 'dart:math';
 
 import 'package:rock_paper_scissors/Shape.dart';
 import 'package:rock_paper_scissors/shapesFactory.dart';
+import 'package:rock_paper_scissors/General.dart';
 
 class Janken {
   late Random random; //init random class
@@ -29,15 +29,6 @@ class Janken {
   }
 
 
-  String question() => 'Do you want to play rock, paper or scissors ?';
-
-  String askQuestion() {
-    print(question());
-    String? answer = stdin.readLineSync();
-    answer = answer ?? '';
-    return answer.toLowerCase();
-  }
-
   bool verifyQuestion(String answer) {
     if (shapes.any((shape) => (shape.alternativeNames).contains(answer))) //check in the list of symbols if the answer is in.
       return true;
@@ -56,10 +47,13 @@ class Janken {
 
   //to get the right answer
   Shape getUserShape() {
-    String answer = askQuestion();
+    String question = 'Do you want to play rock, paper or scissors ?';
+    General general = General();
+
+    String answer = general.askQuestion(question);
     while (!verifyQuestion(answer)) {
       print('Your answer is not correct, please try again.');
-      answer = askQuestion();
+      answer = general.askQuestion(question);
     }
     return convertUserShape(answer);
   }

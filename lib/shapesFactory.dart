@@ -6,7 +6,7 @@ import 'Shape.dart';
 class ShapesFactory {
   final String path;
 
-  ShapesFactory([this.path = 'lib/shapes/Shapes.json']);
+  ShapesFactory([this.path = 'shapes/Shapes.json']);
 
   String readFile() => File(path).readAsStringSync();
 
